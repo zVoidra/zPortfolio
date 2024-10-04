@@ -1,3 +1,4 @@
+import './NavigationMenu.css'
 
 export default function NavigationMenu () {
   return (

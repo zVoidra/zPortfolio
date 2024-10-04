@@ -1,10 +1,15 @@
 import './App.css'
+import ContentArea from './Components/ContentArea/ContentArea'
+import NavigationMenu from './Components/NavigationMenu/NavigationMenu'
 
 function App() {
   return (
-    <>
-    <h1>zPortfolio</h1>
-    </>
+    <div className='App'>
+      <div className='App-Container'>
+        <NavigationMenu/>
+        <ContentArea/>
+      </div>
+    </div>
   )
 }
 
