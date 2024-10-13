@@ -5,7 +5,7 @@ import NavigationMenu from './Components/NavigationMenu/NavigationMenu'
 function App() {
   return (
     <div className='App'>
-      <div className='App-Container'>
+      <div className='AppContainer'>
         <NavigationMenu/>
         <ContentArea/>
       </div>
