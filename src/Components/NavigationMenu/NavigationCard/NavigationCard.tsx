@@ -1,11 +1,22 @@
 import { useState } from "react";
 import SubCard1 from "./SubCard1";
+import { useNavigate } from "react-router-dom";
 
-export default function NavigationCard() {
+interface NavigationCardProps {
+  title: string;
+  navigateTo: string;
+}
+
+export default function NavigationCard(props: NavigationCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpander = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  const navigate = useNavigate();
+  const toggleNavigation = () => {
+    navigate(props.navigateTo);
   };
 
   return (
@@ -13,6 +24,7 @@ export default function NavigationCard() {
       className="NavigationCard"
       onMouseEnter={toggleExpander}
       onMouseLeave={toggleExpander}
+      onMouseDown={toggleNavigation}
     >
       <div className="NavigationHeader">
         <div>
@@ -29,7 +41,7 @@ export default function NavigationCard() {
           </svg>
         </div>
 
-        <div className="CardHeaderText">My Portfolio</div>
+        <div className="CardHeaderText">{props.title}</div>
 
         <div className="CardExpander">
           {isExpanded && (

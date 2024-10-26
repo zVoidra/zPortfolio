@@ -1,35 +1,17 @@
-
-button {
-  border: none;
-  background-color: none;
-  background: none;  
-}
-
 .NavigationMenu {
   flex: 1;
-  background-color: rgb(0, 0, 37);
+  margin: 20px;
 }
 
 .NavigationCard {
-  margin: 10px;
-  background-color: black;
-  min-height: 100px;
   min-width: 230px;
 }
 
 .NavigationHeader {
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-columns: repeat(auto-fill, minmax(50px, 3fr)); */
-  border: 1px solid white;
-
   display: flex;
   flex-direction: row;
-}
-
-.NavigationContent {
-  display: flex;
-  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 .CardHeaderText {
@@ -50,5 +32,7 @@ button {
 .SubCard1 {
   border: 1px white solid;
   margin-left: 20px;
+  padding: 5px;
   background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
 }
