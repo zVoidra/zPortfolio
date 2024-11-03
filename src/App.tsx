@@ -3,11 +3,10 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-// import ContentArea from './Components/ContentArea/ContentArea'
-// import NavigationMenu from './Components/NavigationMenu/NavigationMenu'
 import Layout from "./Components/Layout/Layout";
-import Home from "./Routes/Home/Home";
-import About from "./Routes/About/About";
+import Home from "./Routes/MyPortfolio/MyPortfolio";
+import MyProjects from "./Routes/MyProjects/MyProjects";
+import MyInterests from "./Routes/MyInterests/MyInterests";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +14,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/About", element: <About /> },
+      { path: "/projects", element: <MyProjects /> },
+      { path: "/interests", element: <MyInterests /> },
       { path: "*", element: <Navigate to="/" replace /> },
     ],
   },
