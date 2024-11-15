@@ -1,0 +1,24 @@
+/* styles.css */
+@keyframes expandContract {
+  0% {
+    width: calc(var(--box-width));
+  }
+  50% {
+    width: calc(var(--box-width) * 3);
+  }
+  100% {
+    width: calc(var(--box-width) * 3);
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  animation: expandContract 2s ease-in-out infinite;
+}
+
+.box-grid {
+  display: grid;
+  gap: 5px;
+}
